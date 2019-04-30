@@ -21,7 +21,7 @@ windowBind({"ctrl", "alt"}, {
 })
 
 -- * Set Window Position on screen
-windowBind({"ctrl", "alt", "cmd"}, {
+windowBind({"ctrl", "alt", "cmd", "shift"}, {
   m = wm.maximizeWindow,    -- ⌃⌥⌘ + M
   c = wm.centerOnScreen,    -- ⌃⌥⌘ + C
   left = wm.leftHalf,       -- ⌃⌥⌘ + ←

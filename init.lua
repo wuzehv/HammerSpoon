@@ -14,9 +14,9 @@
 --                            ** Requires **                            --
 -- -----------------------------------------------------------------------
 require "window-management"
-require "vox-control"
-require "vim-binding"
+require "switch-app"
 require "key-binding"
+require "clipboard"
 
 -- -----------------------------------------------------------------------
 --                            ** For Debug **                           --
@@ -39,4 +39,4 @@ hs.pathwatcher.new(os.getenv("HOME") .. "/.hammerspoon/", reloadConfig):start()
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "n", function()
   hs.reload()
 end)
-hs.alert.show("Config loaded")
+hs.notify.new({title="Hammerspoon", informativeText="Config loaded"}):send()
