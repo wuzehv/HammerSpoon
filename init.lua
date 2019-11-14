@@ -33,6 +33,7 @@ function reloadConfig(files)
     hs.alert.show('Config Reloaded')
   end
 end
+
 hs.pathwatcher.new(os.getenv("HOME") .. "/.hammerspoon/", reloadConfig):start()
 
 -- Well, sometimes auto-reload is not working, you know u.u

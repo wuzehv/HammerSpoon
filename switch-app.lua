@@ -8,8 +8,7 @@ local key2App = {
    e = 'Emacs',
    f = 'Finder',
    g = 'Google Chrome',
-   -- v = 'Preview',
-   v = 'Adobe Acrobat Reader DC',
+   v = 'Preview',
    y = 'MailMaster',
    p = 'PhpStorm',
    w = 'WeChat',
@@ -28,9 +27,8 @@ end
 
 -- 添加语言切换函数
 local function toggle_languge(_app)
-   print(_app)
+   hs.keycodes.currentSourceID("com.apple.keylayout.ABC")
    if (_app == 'PhpStorm' or _app == 'Emacs' or _app == 'DataGrip' or _app == 'iTerm') then
-      hs.keycodes.currentSourceID("com.apple.keylayout.ABC")
    else
       hs.keycodes.currentSourceID("com.sogou.inputmethod.sogou.pinyin")
    end
